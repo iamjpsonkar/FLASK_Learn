@@ -18,5 +18,9 @@ def fancy_f():
 @app.route("/fancy_render")
 def fancy_render_f():
     return render_template("first_page.html")
+
+@app.route("/jinja_route")
+def jinja_route_f():
+    return render_template("jinja_intro.html",name="Jay Prakash Sonkar",template_name="Jinja2")
     
 
