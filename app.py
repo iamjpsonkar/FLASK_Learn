@@ -5,6 +5,10 @@ from flask import render_template
 app = Flask(__name__)
 
 @app.route("/")
+def home_f():
+    return render_template('home.html')
+
+@app.route("/normal/")
 def hello_world_f():
     return "<h1>Hello!!!</h1>"
 
@@ -38,6 +42,9 @@ def jinja_expression_f():
     price['grapes']=40
     price['mango']=50
     return render_template('jinja_expression.html',data=data,price=price)
-    
+
+@app.route('/jinja_variables/')
+def jinja_variables_f():
+    return render_template("jinja_variables.html")
     
 
