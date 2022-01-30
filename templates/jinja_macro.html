@@ -1,3 +1,4 @@
+{% from "macro_todo_li.jinja2" import todo_li %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,9 +8,9 @@
     <title>Document</title>
 </head>
 <body>
-    {% macro todo_li(text,done=False) %} 
+    <!-- {% macro todo_li(text,done=False) %} 
     <li>{{ "[]" if done else "[X]" }} - {{ text }} </li>
-    {% endmacro %}
+    {% endmacro %} -->
     <h2>Todos</h2>
     <br/>
     <ul>
