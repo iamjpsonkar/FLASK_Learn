@@ -46,5 +46,13 @@ def jinja_expression_f():
 @app.route('/jinja_variables/')
 def jinja_variables_f():
     return render_template("jinja_variables.html")
-    
 
+@app.route("/jinja_filters/")
+def jinja_filters_f():
+    todos=[
+        "Complete learning for flask",
+        "Create some project",
+        "Watch a movie",
+        "listen some task"
+    ]
+    return render_template("jinja_filters.html",todos=todos)
