@@ -66,3 +66,14 @@ def jinja_macro_f():
         ("listen some Music",False)
     ]
     return render_template("jinja_macro.html",todos=todos)
+
+@app.route('/jinja_inheritance/')
+def jinja_inheritance_f():
+    todos=[
+        ("Complete learning for flask",False),
+        ("Create some project",True),
+        ("Watch a movie",True),
+        ("listen some Music",False)
+    ]
+    return render_template("jinja_inheritance_extend.html",todos=todos)
+    
