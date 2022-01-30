@@ -76,4 +76,15 @@ def jinja_inheritance_f():
         ("listen some Music",False)
     ]
     return render_template("jinja_inheritance_extend.html",todos=todos)
+
+@app.template_test("Divide")
+def isDivide(n,m):
+    if n%m==0:
+        return True 
+    else:
+        return False
+
+@app.route("/jinja_test/")
+def jinja_test_f():
+    return render_template("jinja_test.html")
     
