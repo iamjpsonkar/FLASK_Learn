@@ -53,6 +53,16 @@ def jinja_filters_f():
         "Complete learning for flask",
         "Create some project",
         "Watch a movie",
-        "listen some task"
+        "listen some Music"
     ]
     return render_template("jinja_filters.html",todos=todos)
+
+@app.route("/jinja_macro/")
+def jinja_macro_f():
+    todos=[
+        ("Complete learning for flask",False),
+        ("Create some project",True),
+        ("Watch a movie",True),
+        ("listen some Music",False)
+    ]
+    return render_template("jinja_macro.html",todos=todos)
